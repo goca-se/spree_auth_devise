@@ -28,23 +28,24 @@ module Spree
     end
 
     protected
-      def password_required?
-        !persisted? || password.present? || password_confirmation.present?
-      end
+
+    def password_required?
+      !persisted? || password.present? || password_confirmation.present?
+    end
 
     private
 
-      def set_login
-        # for now force login to be same as email, eventually we will make this configurable, etc.
-        self.login ||= self.email if self.email
-      end
+    def set_login
+      # for now force login to be same as email, eventually we will make this configurable, etc.
+      self.login ||= self.email if self.email
+    end
 
-      def scramble_email_and_password
-        self.email = SecureRandom.uuid + "@example.net"
-        self.login = self.email
-        self.password = SecureRandom.hex(8)
-        self.password_confirmation = self.password
-        self.save
-      end
+    def scramble_email_and_password
+      self.email = SecureRandom.uuid + "@example.net"
+      self.login = self.email
+      self.password = SecureRandom.hex(8)
+      self.password_confirmation = self.password
+      self.save
+    end
   end
 end
