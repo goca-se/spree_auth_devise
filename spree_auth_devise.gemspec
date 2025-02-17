@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'devise', '~> 4.7.1'
   s.add_dependency 'devise-encryptable', '0.1.2'
-  s.add_dependency 'spree_core', spree_version
+  s.add_dependency 'goca-spree-core', spree_version
 
   s.add_development_dependency 'capybara', '~> 2.15.0'
   s.add_development_dependency 'coffee-rails', '~> 4.1.1'
