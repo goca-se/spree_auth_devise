@@ -42,6 +42,12 @@ Devise.setup do |config|
   # Setup a pepper to generate the encrypted password.
   config.pepper = Rails.configuration.secret_token
 
+  # Configurações para evitar avisos de depreciação no Devise 4.1
+  config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  config.reconfirmable = false
+  config.skip_session_storage = []
+  config.strip_whitespace_keys = []
+
   # ==> Configuration for :confirmable
   # The time you want to give your user to confirm his account. During this time
   # he will be able to access your application without confirming. Default is nil.

@@ -38,8 +38,12 @@ class Spree::Admin::UserSessionsController < Devise::SessionsController
     end
 
     def redirect_back_or_default(default)
-      redirect_to(session["spree_user_return_to"] || default)
-      session["spree_user_return_to"] = nil
+      if session[:spree_user_return_to].present?
+        redirect_to(session[:spree_user_return_to])
+        session[:spree_user_return_to] = nil
+      else
+        redirect_back(fallback_location: default)
+      end
     end
 
     def resolve_layout
