@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
 
   spree_version = '3.1.14.rails.5.0.1'
 
-  s.add_dependency 'devise', '~> 4.0.0'
+  s.add_dependency 'devise', '~> 4.2.0'
   s.add_dependency 'devise-encryptable', '0.1.2'
   s.add_dependency 'goca-spree-core', spree_version
 
