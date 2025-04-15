@@ -21,16 +21,16 @@ Gem::Specification.new do |s|
 
   spree_version = '3.1.14.rails.5.2.8.0'
 
-  s.add_dependency 'devise', '~> 4.2.0'
+  s.add_dependency 'devise', '~> 4.7.0'
   s.add_dependency 'devise-encryptable', '0.1.2'
   s.add_dependency 'goca-spree-core', spree_version
 
   s.add_development_dependency 'capybara', '~> 2.15.0'
-  s.add_development_dependency 'coffee-rails', '~> 4.1.1'
+  s.add_development_dependency 'coffee-rails', '~> 4.2.2'
   s.add_development_dependency 'database_cleaner', '~> 1.5.3'
   s.add_development_dependency 'email_spec', '~> 2.1.0'
   s.add_development_dependency 'factory_girl', '~> 4.8.0'
-  s.add_development_dependency 'ffaker', '~> 2.2.0'
+  s.add_development_dependency 'ffaker', '~> 2.9.0'
   s.add_development_dependency 'launchy', '~> 2.1.0'
   s.add_development_dependency 'mysql2', '~> 0.4.10'
   s.add_development_dependency 'pg', '~> 0.21.0'
@@ -39,7 +39,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec-rails', '~> 3.5.2'
   s.add_development_dependency 'shoulda-matchers', '~> 3.1.0'
   s.add_development_dependency 'simplecov', '~> 0.12.0'
-  s.add_development_dependency 'spree_backend', spree_version
-  s.add_development_dependency 'spree_frontend', spree_version
+  s.add_development_dependency 'goca-spree-backend', spree_version
+  s.add_development_dependency 'goca-spree-frontend', spree_version
   s.add_development_dependency 'sqlite3', '~> 1.3.13'
 end
